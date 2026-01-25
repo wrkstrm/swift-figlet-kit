@@ -8,11 +8,9 @@ let useLocalDeps: Bool = {
   return v == "1" || v == "true" || v == "yes"
 }()
 
-func localOrRemote(
-  name: String, path: String, url: String, requirement: Package.Dependency.Requirement
-) -> Package.Dependency {
+func localOrRemote(name: String, path: String, url: String, from version: Version) -> Package.Dependency {
   if useLocalDeps { return .package(name: name, path: path) }
-  return .package(url: url, requirement)
+  return .package(url: url, from: version)
 }
 
 let package: Package = .init(
@@ -37,7 +35,7 @@ let package: Package = .init(
       name: "common-shell",
       path: "../../../common/domain/system/common-shell",
       url: "https://github.com/wrkstrm/common-shell.git",
-      requirement: .upToNextMajor(from: "0.1.0")),
+      from: "0.1.0"),
   ],
   targets: [
     .systemLibrary(
