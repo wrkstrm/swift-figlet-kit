@@ -1,5 +1,19 @@
 // swift-tools-version:6.2
+import Foundation
 import PackageDescription
+
+let useLocalDeps: Bool = {
+  guard let raw = ProcessInfo.processInfo.environment["SPM_USE_LOCAL_DEPS"] else { return false }
+  let v = raw.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+  return v == "1" || v == "true" || v == "yes"
+}()
+
+func localOrRemote(
+  name: String, path: String, url: String, requirement: Package.Dependency.Requirement
+) -> Package.Dependency {
+  if useLocalDeps { return .package(name: name, path: path) }
+  return .package(url: url, requirement)
+}
 
 let package: Package = .init(
   name: "SwiftFigletKit",
@@ -19,7 +33,11 @@ let package: Package = .init(
     .package(url: "https://github.com/apple/swift-argument-parser", from: "1.5.0"),
     // DocC plugin enables `swift package generate-documentation`
     .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.3.0"),
-    .package(name: "CommonShell", path: "../common/domain/system/common-shell"),
+    localOrRemote(
+      name: "common-shell",
+      path: "../../../common/domain/system/common-shell",
+      url: "https://github.com/wrkstrm/common-shell.git",
+      requirement: .upToNextMajor(from: "0.1.0")),
   ],
   targets: [
     .systemLibrary(
@@ -59,7 +77,7 @@ let package: Package = .init(
       dependencies: [
         "SwiftFigletKit",
         .product(name: "ArgumentParser", package: "swift-argument-parser"),
-        .product(name: "CommonShell", package: "CommonShell"),
+        .product(name: "CommonShell", package: "common-shell"),
       ],
     ),
     .testTarget(
