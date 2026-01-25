@@ -5,8 +5,8 @@ set -euo pipefail
 # - Copies Sources/SwiftFigletKit/Fonts/core/*.flf into Sources/SwiftFigletKit/Resources/Fonts
 # - Optionally creates gz variants into Sources/SwiftFigletKit/ResourcesGZ/Fonts
 
-PKG_SRC_ROOT="code/mono/apple/spm/universal/SwiftFigletKit"
-PKG_ROOT="code/mono/apple/spm/universal/SwiftFigletKit/Sources/SwiftFigletKit"
+PKG_SRC_ROOT="code/mono/apple/spm/universal/domain/tooling/swift-figlet-kit"
+PKG_ROOT="code/mono/apple/spm/universal/domain/tooling/swift-figlet-kit/Sources/SwiftFigletKit"
 SRC_TOP="${1:-$PKG_SRC_ROOT/Fonts/core}"
 DO_GZIP="${DO_GZIP:-1}"
 
