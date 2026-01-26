@@ -17,7 +17,7 @@ let package: Package = .init(
   name: "SwiftFigletKit",
   platforms: [
     .iOS(.v17),
-    .macOS(.v14),
+    .macOS(.v15),
     .tvOS(.v16),
     .watchOS(.v9),
   ],
