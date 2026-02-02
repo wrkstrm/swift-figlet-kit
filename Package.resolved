@@ -1,6 +1,24 @@
 {
-  "originHash" : "1a812851fbe2537178ae08593df76156531a8dcafcf835a6ea294f21d89ac726",
+  "originHash" : "7706b2481c157e6a977827803978f94d9528ac50c08890f3a0c75efbba2c30e7",
   "pins" : [
+    {
+      "identity" : "common-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wrkstrm/common-log.git",
+      "state" : {
+        "revision" : "12d4a33af2070e5282aab14d84a48a2baa168d0a",
+        "version" : "3.0.0"
+      }
+    },
+    {
+      "identity" : "common-process",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wrkstrm/common-process.git",
+      "state" : {
+        "revision" : "77dad986a45b6e18721b1b13896c2200eb1d2252",
+        "version" : "0.3.0"
+      }
+    },
     {
       "identity" : "swift-argument-parser",
       "kind" : "remoteSourceControl",
@@ -98,6 +116,51 @@
       "state" : {
         "revision" : "e8fbc8b05a155f311b862178d92d043afb216fe3",
         "version" : "0.7.3"
+      }
+    },
+    {
+      "identity" : "wrkstrm-foundation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wrkstrm/wrkstrm-foundation.git",
+      "state" : {
+        "revision" : "61250f46d167e3d4aa3750bb59d283826478bcec",
+        "version" : "3.0.0"
+      }
+    },
+    {
+      "identity" : "wrkstrm-performance",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wrkstrm/wrkstrm-performance.git",
+      "state" : {
+        "revision" : "7af04d75db6e4b6a9e686b948d04ee9b9e8510b5",
+        "version" : "0.1.0"
+      }
+    },
+    {
+      "identity" : "wrkstrmfoundation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wrkstrm/WrkstrmFoundation.git",
+      "state" : {
+        "revision" : "0bbc5eb9d0a2faada391d585be36371157535035",
+        "version" : "2.8.1"
+      }
+    },
+    {
+      "identity" : "wrkstrmlog",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wrkstrm/WrkstrmLog.git",
+      "state" : {
+        "revision" : "f03a3f99c477e3c5c62d96f2833c2ac171390c59",
+        "version" : "2.2.4"
+      }
+    },
+    {
+      "identity" : "wrkstrmmain",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wrkstrm/WrkstrmMain.git",
+      "state" : {
+        "revision" : "c2e57bd3f0f5e4ce720d5a92a0126e9b1d6750e1",
+        "version" : "2.5.0"
       }
     }
   ],
