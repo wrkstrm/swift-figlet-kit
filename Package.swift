@@ -8,7 +8,9 @@ let useLocalDeps: Bool = {
   return v == "1" || v == "true" || v == "yes"
 }()
 
-func localOrRemote(name: String, path: String, url: String, from version: Version) -> Package.Dependency {
+func localOrRemote(name: String, path: String, url: String, from version: Version)
+  -> Package.Dependency
+{
   if useLocalDeps { return .package(name: name, path: path) }
   return .package(url: url, from: version)
 }
@@ -35,11 +37,7 @@ let package: Package = .init(
       name: "common-shell",
       path: "../../../../../../../swift-universal/public/spm/universal/domain/system/common-shell",
       url: "https://github.com/swift-universal/common-shell.git",
-<<<<<<< Updated upstream
-      from: "0.0.1"),
-=======
       from: "0.1.0"),
->>>>>>> Stashed changes
   ],
   targets: [
     .systemLibrary(
