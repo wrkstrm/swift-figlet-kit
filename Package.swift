@@ -35,7 +35,11 @@ let package: Package = .init(
       name: "common-shell",
       path: "../../../../../../../swift-universal/public/spm/universal/domain/system/common-shell",
       url: "https://github.com/swift-universal/common-shell.git",
+<<<<<<< Updated upstream
       from: "0.0.1"),
+=======
+      from: "0.1.0"),
+>>>>>>> Stashed changes
   ],
   targets: [
     .systemLibrary(
