@@ -33,9 +33,9 @@ let package: Package = .init(
     .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.3.0"),
     localOrRemote(
       name: "common-shell",
-      path: "../../../common/domain/system/common-shell",
-      url: "https://github.com/wrkstrm/common-shell.git",
-      from: "0.1.0"),
+      path: "../../../../../../../swift-universal/public/spm/universal/domain/system/common-shell",
+      url: "https://github.com/swift-universal/common-shell.git",
+      from: "0.0.1"),
   ],
   targets: [
     .systemLibrary(
